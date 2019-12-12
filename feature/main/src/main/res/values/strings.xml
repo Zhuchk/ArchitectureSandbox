@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bottom_navigation_example">Bottom Navigation Example</string>
+    <string name="mvvm_example">MVVM example</string>
+    <string name="drawer_navigation_example">Drawer Navigation Example</string>
+    <string name="dynamic_feature_example">Dynamic Feature Example</string>
+    <string name="language_change_example">Language Change Example</string>
+    <string name="error_handling_example">Error Handling Example</string>
+    <string name="design_system_example">Design System Example</string>
+</resources>
