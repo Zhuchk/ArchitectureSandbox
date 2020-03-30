@@ -2,6 +2,7 @@
 Sandbox for solutions of common problems in android development.
 Also can be used as template for new projects.
 
+
 ## Already împlemented:
 - MVP exmaple
 - simple dagger (yet unacceptable for large multimodule project's)
@@ -20,3 +21,4 @@ Also can be used as template for new projects.
 - update library versions
 - Error handling on presentation layer example
 - mock api server as interceptor and as standalone app (smth similar to how [LeakCanary](https://github.com/square/leakcanary) works)
+- work with preferences in dataSources.
