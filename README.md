@@ -13,6 +13,7 @@ Also can be used as template for new projects.
 - BottomNavigationView
 - Drawer navigation
 - Dynamic delivery feature
+- DeepLink handling
 - Work with languages (easy support for new in modulizes app)
 - UI test's on [kaspresso](https://github.com/KasperskyLab/Kaspresso)
 - migrate to [Rx3](https://github.com/ReactiveX/RxKotlin)
