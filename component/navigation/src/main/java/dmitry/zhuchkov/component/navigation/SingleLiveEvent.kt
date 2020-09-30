@@ -1,4 +1,4 @@
-package dmitrii.zhuchkov.sandbox.navigation
+package dmitry.zhuchkov.component.navigation
 
 /**
  *   Created by Dmitry Zhuchkov
@@ -38,32 +38,32 @@ import java.util.concurrent.atomic.AtomicBoolean
  */
 class SingleLiveEvent<T> : MutableLiveData<T>() {
 
-	private val mPending = AtomicBoolean(false)
+    private val mPending = AtomicBoolean(false)
 
-	@MainThread
-	override fun observe(owner: LifecycleOwner, observer: Observer<in T>) {
+    @MainThread
+    override fun observe(owner: LifecycleOwner, observer: Observer<in T>) {
 
-		if (hasActiveObservers()) {
-			error("Multiple observers registered")
-		}
+        if (hasActiveObservers()) {
+            error("Multiple observers registered")
+        }
 
-		super.observe(owner, Observer { t ->
-			if (mPending.compareAndSet(true, false)) {
-				observer.onChanged(t)
-			}
-		})
-	}
+        super.observe(owner, Observer { t ->
+            if (mPending.compareAndSet(true, false)) {
+                observer.onChanged(t)
+            }
+        })
+    }
 
-	@MainThread
-	override fun setValue(t: T?) {
-		mPending.set(true)
-		super.setValue(t)
-	}
+    @MainThread
+    override fun setValue(t: T?) {
+        mPending.set(true)
+        super.setValue(t)
+    }
 
-	@MainThread
-	fun call() {
-		value = null
-	}
+    @MainThread
+    fun call() {
+        value = null
+    }
 
-	fun isCalled() = mPending.get()
+    fun isCalled() = mPending.get()
 }

@@ -5,3 +5,7 @@ package dmitry.zhuchkov.component.navigation
  *
  */
 interface NavigationEvent
+
+object NavigationUp : NavigationEvent
+
+object NavigationExit : NavigationEvent

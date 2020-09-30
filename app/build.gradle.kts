@@ -39,12 +39,18 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
 
         getByName("debug") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 }
@@ -54,9 +60,11 @@ dependencies {
     implementation(project((":component.ui")))
     implementation(project((":component.utils")))
     implementation(project((":component.navigation")))
+    implementation(project((":component.dagger")))
     implementation(project((":feature.main")))
+    implementation(project((":feature.mvvm")))
     implementation(project((":feature.splash")))
-    
+
     implementation(SupportLibraries.material)
     implementation(SupportLibraries.constraint)
     implementation(SupportLibraries.recyclerView)

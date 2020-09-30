@@ -12,7 +12,8 @@ import dmitrii.zhuchkov.sandbox.LaunchActivity
 @Module(
     includes = [
         AndroidSupportInjectionModule::class,
-        NavigationModule::class
+        NavigationModule::class,
+        FeatureModule::class
     ]
 )
 interface AppModule {

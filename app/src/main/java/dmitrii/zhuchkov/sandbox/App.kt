@@ -1,17 +1,20 @@
 package dmitrii.zhuchkov.sandbox
 
-import android.app.Application
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
-import dmitrii.zhuchkov.sandbox.di.DaggerAppComponent
+import dmitrii.zhuchkov.sandbox.di.DaggerApp
 import javax.inject.Inject
 
 /**
  * Created by Dmitrii on 11.12.2019
  *
  */
-class App : Application(), HasAndroidInjector {
+class App : DaggerApp(), HasAndroidInjector {
+
+    init {
+        component.inject(this)
+    }
 
     @Inject
     lateinit var androidInjector: DispatchingAndroidInjector<Any>
@@ -19,11 +22,4 @@ class App : Application(), HasAndroidInjector {
     override fun androidInjector(): AndroidInjector<Any> =
         androidInjector
 
-    override fun onCreate() {
-        super.onCreate()
-
-        DaggerAppComponent.factory()
-            .create(this)
-            .inject(this)
-    }
 }

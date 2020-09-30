@@ -2,6 +2,7 @@ package dmitrii.zhuchkov.sandbox.di
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
+import dmitrii.zhuchkov.sandbox.di.feature.MainModule
 import dmitrii.zhuchkov.sandbox.di.feature.SplashModule
 import dmitry.zhuchkov.feature.main.ui.MainFragment
 import dmitry.zhuchkov.feature.splash.ui.SplashFragment
@@ -18,6 +19,6 @@ interface LaunchActivityModule {
     fun getSplashFragment(): SplashFragment
 
     @FragmentScope
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = [MainModule::class])
     fun getMainFragment(): MainFragment
 }

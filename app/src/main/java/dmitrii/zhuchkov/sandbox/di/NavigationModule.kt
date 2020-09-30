@@ -3,10 +3,11 @@ package dmitrii.zhuchkov.sandbox.di
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dmitrii.zhuchkov.sandbox.navigation.RouterImpl
+import dmitry.zhuchkov.component.dagger.AppScope
 import dmitry.zhuchkov.component.navigation.NavigationEventProvider
 import dmitry.zhuchkov.component.navigation.NavigationEventProviderImpl
 import dmitry.zhuchkov.component.navigation.Router
-import dmitrii.zhuchkov.sandbox.navigation.RouterImpl
 
 /**
  * Created by Dmitrii on 11.12.2019
