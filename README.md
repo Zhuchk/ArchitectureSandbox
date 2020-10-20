@@ -6,6 +6,7 @@ Also can be used as template for new projects.
 ## Already împlemented:
 - MVP exmaple
 - simple dagger (yet unacceptable for large multimodule project's)
+- dagger example with external dependencies (using dependency keyword )
 - modulization concept
 - Google Architecture Navigation example + self navigation
 
